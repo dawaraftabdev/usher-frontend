@@ -5,12 +5,12 @@ import { ALL_COMPONENTS } from '../components/common'
 import { fetchPageLayout } from '../utils/pageLayouts'
 import '../styles/global.css'
 
-const Projects = () => {
+const SocialLogin = () => {
   const [state, setState] = useState(null)
   const componentMap = ALL_COMPONENTS
 
   useEffect(() => {
-    fetchPageLayout('http://localhost:3002/404', setState)
+    fetchPageLayout('http://localhost:3002/social-login', setState)
   }, [])
 
   return (
@@ -29,4 +29,4 @@ const Projects = () => {
     </>
   )
 }
-export default Projects
+export default SocialLogin

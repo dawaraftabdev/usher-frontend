@@ -8,4 +8,9 @@ export const MainBody = styled.div`
         background-repeat: no-repeat;
         background-position: 100% 0;
     `}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
+
+export const BodyColumn = styled.div``

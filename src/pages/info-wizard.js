@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import '@theguarantors/ui-kit-v3/dist/fonts/fonts.css'
 import { GlobalStyles } from '@theguarantors/ui-kit-v3/dist/assets/styles/index'
 import { ALL_COMPONENTS } from '../components/common'
 import { fetchPageLayout } from '../utils/pageLayouts'
 import '../styles/global.css'
-import '@theguarantors/ui-kit-v3/dist/fonts/fonts.css'
 
-const Index = () => {
+const SocialLogin = () => {
   const [state, setState] = useState(null)
   const componentMap = ALL_COMPONENTS
 
   useEffect(() => {
-    fetchPageLayout('http://localhost:3002/layout', setState)
+    fetchPageLayout('http://localhost:3002/info-wizard', setState)
   }, [])
 
   return (
@@ -29,4 +29,4 @@ const Index = () => {
     </>
   )
 }
-export default Index
+export default SocialLogin

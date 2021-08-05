@@ -2,6 +2,8 @@ import HeaderComponent from './header'
 import HeaderColumnComponent from './header/headerColumn'
 
 import BodyComponent from './body'
+import BodyColumnComponent from './body/bodyColumn'
+
 import SocialLoginsComponent from './socialLogins'
 import FooterComponent from './footer'
 import FooterRightComponent from './footer/footerRight'
@@ -18,6 +20,10 @@ import DescriptorsComponent from './descriptors'
 import InputFieldComponent from './inputField'
 import ButtonsComponent from './buttons'
 import SocialButtonComponent from './socialButton'
+
+import StepsComponent from './steps'
+import StepComponent from './steps/step'
+import DatePickerComponent from './datePicker'
 
 export const ALL_COMPONENTS = {
   header: HeaderComponent,
@@ -38,5 +44,9 @@ export const ALL_COMPONENTS = {
   headerLeft: HeaderColumnComponent,
   headerRight: HeaderColumnComponent,
   socialLogins: SocialLoginsComponent,
-  socialButton: SocialButtonComponent
+  socialButton: SocialButtonComponent,
+  bodyColumn: BodyColumnComponent,
+  steps: StepsComponent,
+  step: StepComponent,
+  datePicker: DatePickerComponent
 }

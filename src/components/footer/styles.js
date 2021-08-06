@@ -10,16 +10,16 @@ export const Footer = styled.footer`
 export const FooterRow = styled.div`
   background-image: url('${footerDecoration}');
   background-repeat: no-repeat;
-  background-position: 100% 0;
+  background-position: 50% 0%;
+  background-size: cover;
   padding: 0px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 215px;
-  background-size: contain;
+  min-height: 27vh;
 `
 export const FooterLeft = styled.div``
 export const FooterRight = styled.div`
   align-self: flex-end;
-  padding-bottom: 15px;
+  padding-bottom: 2.5vh;
 `

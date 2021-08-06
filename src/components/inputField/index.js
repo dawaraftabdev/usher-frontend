@@ -1,7 +1,7 @@
 import React from 'react'
-import { TextInput } from '@theguarantors/ui-kit-v3'
+import { StyledTextInput } from './styles'
 
 const InputFieldComponent = props => {
-  return <TextInput {...props} />
+  return <StyledTextInput {...props} />
 }
 export default InputFieldComponent

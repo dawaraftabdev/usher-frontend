@@ -6,6 +6,8 @@ export const Heading = styled.h1`
           font-family: Gilroy-Medium;
           font-size: 16px;
           line-height: 24px;
+          margin-top: 24px;
+          font-weight: 400;
         `
       : css`
           font-family: Tiempos Headline;

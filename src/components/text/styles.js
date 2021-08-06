@@ -9,4 +9,14 @@ export const Text = styled.div`
     css`
       color: white;
     `}
+  ${({ styles }) =>
+    styles &&
+    css`
+      font-family: ${styles.fontFamily};
+      font-size: ${styles.fontSize};
+      font-weight: ${styles.fontWeight};
+      line-height: ${styles.lineHeight};
+      color: ${styles.color};
+      margin: ${styles.margin};
+    `}
 `

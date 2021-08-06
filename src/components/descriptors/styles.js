@@ -1,2 +1,3 @@
 import styled from 'styled-components'
-export const Descriptors = styled.div``
+export const Descriptors = styled.div`
+`

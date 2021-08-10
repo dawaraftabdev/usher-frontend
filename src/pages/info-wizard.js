@@ -7,11 +7,15 @@ import '../styles/global.css'
 
 const SocialLogin = () => {
   const [state, setState] = useState(null)
+  const [currentStep, setCurrentStep] = useState(1)
   const componentMap = ALL_COMPONENTS
 
   useEffect(() => {
-    fetchPageLayout('http://localhost:3002/info-wizard', setState)
-  }, [])
+    fetchPageLayout(
+      `http://localhost:3002/info-wizard/step/${currentStep}`,
+      setState
+    )
+  }, [currentStep])
 
   return (
     <>
@@ -20,6 +24,7 @@ const SocialLogin = () => {
         state.components.map((c, i) => {
           const Component = componentMap[c.type]
           const props = c.props
+          props.setCurrentStep = setCurrentStep
           props.componentMap = componentMap
           if (!Component) {
             return null

@@ -24,6 +24,9 @@ import SocialButtonComponent from './socialButton'
 import StepsComponent from './steps'
 import StepComponent from './steps/step'
 import DatePickerComponent from './datePicker'
+import CheckboxComponent from './checkbox'
+import FacebookButtonComponent from './socialButton/buttons/facebook'
+import GoogleButtonComponent from './socialButton/buttons/google'
 
 export const ALL_COMPONENTS = {
   header: HeaderComponent,
@@ -48,5 +51,8 @@ export const ALL_COMPONENTS = {
   bodyColumn: BodyColumnComponent,
   steps: StepsComponent,
   step: StepComponent,
-  datePicker: DatePickerComponent
+  datePicker: DatePickerComponent,
+  checkbox: CheckboxComponent,
+  facebookButton: FacebookButtonComponent,
+  googleButton: GoogleButtonComponent
 }

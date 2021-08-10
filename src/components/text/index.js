@@ -1,15 +1,24 @@
 import React from 'react'
-import { Text } from './styles'
+import { StyledHelperText, StyledHeader4 } from './styles'
 
 const TextComponent = props => {
-  console.log(props)
+  if (props && props.isHelperText) {
+    return (
+      <StyledHelperText
+        styles={props && props.styles}
+        isBottom={props.isBottom ? true : false}
+      >
+        {props && props.value}
+      </StyledHelperText>
+    )
+  }
   return (
-    <Text
+    <StyledHeader4
       styles={props && props.styles}
       isBottom={props.isBottom ? true : false}
     >
       {props && props.value}
-    </Text>
+    </StyledHeader4>
   )
 }
 export default TextComponent

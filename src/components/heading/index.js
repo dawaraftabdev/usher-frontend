@@ -1,7 +1,10 @@
 import React from 'react'
-import { Heading } from './styles'
+import { StyledHeader, StyledSubHeader } from './styles'
 
 const HeadingComponent = props => {
-  return <Heading {...props}>{props && props.value}</Heading>
+  if (props.isSub) {
+    return <StyledSubHeader {...props}>{props && props.value}</StyledSubHeader>
+  }
+  return <StyledHeader {...props}>{props && props.value}</StyledHeader>
 }
 export default HeadingComponent

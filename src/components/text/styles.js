@@ -1,22 +1,26 @@
 import styled, { css } from 'styled-components'
-export const Text = styled.div`
-  font-family: Gilroy-Medium;
-  font-size: 12px;
-  line-height: 18px;
+import {
+  HelperText,
+  Header4
+} from '@theguarantors/ui-kit-v3/dist/design-system'
+
+export const StyledHelperText = styled(HelperText)`
+  font-size: 1rem !important;
+  margin-top: 2rem;
+`
+
+export const StyledHeader4 = styled(Header4).attrs({
+  as: 'div'
+})`
   width: 480px;
   ${({ isBottom }) =>
     isBottom &&
     css`
-      color: white;
+      color: var(--color-text-white);
     `}
   ${({ styles }) =>
     styles &&
     css`
-      font-family: ${styles.fontFamily};
-      font-size: ${styles.fontSize};
-      font-weight: ${styles.fontWeight};
-      line-height: ${styles.lineHeight};
-      color: ${styles.color};
       margin: ${styles.margin};
     `}
 `

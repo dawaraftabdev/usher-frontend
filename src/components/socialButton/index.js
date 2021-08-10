@@ -1,8 +1,22 @@
 import React from 'react'
-import { Button } from '@theguarantors/ui-kit-v3'
+import { ALL_COMPONENTS } from '../common'
 
 const SocialButtonComponent = props => {
-  return <Button {...props}>{props.text}</Button>
+  const componentMap = ALL_COMPONENTS
+  return (
+    <>
+      {props &&
+        props.components &&
+        props.components.map((c, i) => {
+          const Component = componentMap[c.type]
+          const props = c.props
+          if (!Component) {
+            return null
+          }
+          return <Component {...props} key={c.id} />
+        })}
+    </>
+  )
 }
 
 export default SocialButtonComponent

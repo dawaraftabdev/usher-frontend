@@ -5,13 +5,17 @@ import { ALL_COMPONENTS } from '../components/common'
 import { fetchPageLayout } from '../utils/pageLayouts'
 import '../styles/global.css'
 
-const NotFound = () => {
+const SocialLogin = () => {
   const [state, setState] = useState(null)
+  const [currentStep, setCurrentStep] = useState(2)
   const componentMap = ALL_COMPONENTS
 
   useEffect(() => {
-    fetchPageLayout('http://localhost:3002/404', setState)
-  }, [])
+    fetchPageLayout(
+      `http://localhost:3002/info-wizard/step/${currentStep}`,
+      setState
+    )
+  }, [currentStep])
 
   return (
     <>
@@ -20,6 +24,7 @@ const NotFound = () => {
         state.components.map((c, i) => {
           const Component = componentMap[c.type]
           const props = c.props
+          props.setCurrentStep = setCurrentStep
           props.componentMap = componentMap
           if (!Component) {
             return null
@@ -29,4 +34,4 @@ const NotFound = () => {
     </>
   )
 }
-export default NotFound
+export default SocialLogin

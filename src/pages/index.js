@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { ALL_COMPONENTS } from '../components/common'
 import { fetchPageLayout } from '../utils/pageLayouts'
-import { theme } from '@theguarantors/ui-kit-v3/dist/design-system'
+import { theme } from '@theguarantors/ui-kit-v3/design-system'
 import { ThemeProvider } from 'styled-components'
 
-import { GlobalStyles } from '@theguarantors/ui-kit-v3/dist/assets/styles/index'
+import { GlobalStyles } from '@theguarantors/ui-kit-v3/assets/styles/index'
 import '../styles/global.css'
-import '@theguarantors/ui-kit-v3/dist/fonts/fonts.css'
+import '@theguarantors/ui-kit-v3/fonts/fonts.css'
 
 const Index = () => {
   const [state, setState] = useState(null)

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import '@theguarantors/ui-kit-v3/dist/fonts/fonts.css'
-import { GlobalStyles } from '@theguarantors/ui-kit-v3/dist/assets/styles/index'
+import { theme } from '@theguarantors/ui-kit-v3/design-system'
+import { GlobalStyles } from '@theguarantors/ui-kit-v3/assets/styles/index'
 import { ALL_COMPONENTS } from '../components/common'
 import { fetchPageLayout } from '../utils/pageLayouts'
+import { ThemeProvider } from 'styled-components'
 import '../styles/global.css'
 
 const NotFound = () => {
@@ -15,17 +16,19 @@ const NotFound = () => {
 
   return (
     <>
-      <GlobalStyles />
-      {state &&
-        state.components.map((c, i) => {
-          const Component = componentMap[c.type]
-          const props = c.props
-          props.componentMap = componentMap
-          if (!Component) {
-            return null
-          }
-          return <Component {...props} key={c.id} />
-        })}
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        {state &&
+          state.components.map((c, i) => {
+            const Component = componentMap[c.type]
+            const props = c.props
+            props.componentMap = componentMap
+            if (!Component) {
+              return null
+            }
+            return <Component {...props} key={c.id} />
+          })}
+      </ThemeProvider>
     </>
   )
 }

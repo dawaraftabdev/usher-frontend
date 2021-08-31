@@ -1,11 +1,11 @@
 import React from 'react'
-import { ALL_COMPONENTS } from '../common'
-import { MainBody, BodyColumn } from './styles'
+import { ALL_COMPONENTS } from '../../common'
+import { BodyQuestionnaire } from '../styles'
 
-const BodyComponent = props => {
+const QuestionnaireComponent = props => {
   const componentMap = ALL_COMPONENTS
   return (
-    <MainBody {...props.style}>
+    <BodyQuestionnaire>
       {props &&
         props.components &&
         props.components.map((c, i) => {
@@ -16,7 +16,7 @@ const BodyComponent = props => {
           }
           return <Component {...props} key={c.id} />
         })}
-    </MainBody>
+    </BodyQuestionnaire>
   )
 }
-export default BodyComponent
+export default QuestionnaireComponent

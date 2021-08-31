@@ -4,6 +4,12 @@ import HeaderColumnComponent from './header/headerColumn'
 import BodyComponent from './body'
 import BodyColumnComponent from './body/bodyColumn'
 
+import { Box } from '@theguarantors/ui-kit-v3'
+
+import QuestionnaireComponent from './body/questionnaire'
+import QuestionnaireRightComponent from './body/questionnaire/questionnaireRight'
+import QuestionnaireLeftComponent from './body/questionnaire/questionnaireLeft'
+
 import SocialLoginsComponent from './socialLogins'
 import FooterComponent from './footer'
 import FooterRightComponent from './footer/footerRight'
@@ -25,8 +31,15 @@ import StepsComponent from './steps'
 import StepComponent from './steps/step'
 import DatePickerComponent from './datePicker'
 import CheckboxComponent from './checkbox'
+import RadioComponent from './radio'
 import FacebookButtonComponent from './socialButton/buttons/facebook'
 import GoogleButtonComponent from './socialButton/buttons/google'
+
+import StepsDotsComponent from './steps/stepDots'
+import StepDotComponent from './steps/stepDots/stepDot'
+
+import MapComponent from './map'
+import ScrollableAreaComponent from './scrollableArea'
 
 export const ALL_COMPONENTS = {
   header: HeaderComponent,
@@ -53,6 +66,15 @@ export const ALL_COMPONENTS = {
   step: StepComponent,
   datePicker: DatePickerComponent,
   checkbox: CheckboxComponent,
+  radio: RadioComponent,
   facebookButton: FacebookButtonComponent,
-  googleButton: GoogleButtonComponent
+  googleButton: GoogleButtonComponent,
+  questionnaire: QuestionnaireComponent,
+  questionnaireLeft: QuestionnaireLeftComponent,
+  questionnaireRight: QuestionnaireRightComponent,
+  stepDots: StepsDotsComponent,
+  stepDot: StepDotComponent,
+  map: MapComponent,
+  scrollableArea: ScrollableAreaComponent,
+  box: Box
 }

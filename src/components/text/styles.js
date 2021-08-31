@@ -1,8 +1,5 @@
 import styled, { css } from 'styled-components'
-import {
-  HelperText,
-  Header4
-} from '@theguarantors/ui-kit-v3/dist/design-system'
+import { HelperText, Header4 } from '@theguarantors/ui-kit-v3/design-system'
 
 export const StyledHelperText = styled(HelperText)`
   font-size: 1rem !important;

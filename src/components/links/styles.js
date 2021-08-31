@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Link } from '@theguarantors/ui-kit-v3/dist/design-system'
+import { Link } from '@theguarantors/ui-kit-v3/design-system'
 
 export const LinkList = styled(Link).attrs({
   as: 'ul'

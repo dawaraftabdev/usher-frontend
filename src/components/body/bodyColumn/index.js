@@ -5,7 +5,9 @@ import { BodyColumn } from '../styles'
 const BodyColumnComponent = props => {
   const componentMap = ALL_COMPONENTS
   return (
-    <BodyColumn>
+    <BodyColumn
+      isCenterAligned={props && props.styles && props.styles.textAlign}
+    >
       {props &&
         props.components &&
         props.components.map((c, i) => {

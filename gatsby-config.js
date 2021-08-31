@@ -1,7 +1,7 @@
 module.exports = {
-  siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "testing",
-  },
-  plugins: ["gatsby-plugin-styled-components"],
-};
+  plugins: ['gatsby-plugin-styled-components'],
+  flags: {
+    DEV_SSR: false,
+    DEV_WEBPACK_CACHE: false
+  }
+}

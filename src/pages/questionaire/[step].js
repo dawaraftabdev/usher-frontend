@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import { ALL_COMPONENTS } from '../components/common'
-import { fetchPageLayout } from '../utils/pageLayouts'
+import { ALL_COMPONENTS } from '../../components/common'
+import { fetchPageLayout } from '../../utils/pageLayouts'
 import { theme } from '@theguarantors/ui-kit-v3/design-system'
 import { ThemeProvider } from 'styled-components'
 
 import { GlobalStyles } from '@theguarantors/ui-kit-v3/assets/styles/index'
-import '../styles/global.css'
+import '../../styles/global.css'
 import '@theguarantors/ui-kit-v3/fonts/fonts.css'
 
-const Index = () => {
+const StepQuestionaire = props => {
   const [state, setState] = useState(null)
+  const [currentStep, setCurrentStep] = useState(props.params.step)
   const componentMap = ALL_COMPONENTS
 
   useEffect(() => {
-    fetchPageLayout('http://localhost:3002/social-login', setState)
-  }, [])
+    fetchPageLayout(
+      `http://localhost:3002/info-wizard/step/${currentStep}`,
+      setState
+    )
+  }, [currentStep])
 
   return (
     <>
@@ -34,4 +38,4 @@ const Index = () => {
     </>
   )
 }
-export default Index
+export default StepQuestionaire

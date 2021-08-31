@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "description": "testing",
-  "author": "Hammad Khalid",
-  "keywords": [
-    "gatsby"
-  ],
+  "author": "Dawar Aftab",
+  "keywords": ["gatsby"],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "cleanStart": "gatsby clean && gatsby develop"
   },
   "dependencies": {
-    "@theguarantors/ui-kit-v3": "^3.3.0",
+    "@theguarantors/ui-kit-v3": "^3.4.0",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.10.2",
     "gatsby-plugin-styled-components": "^4.10.0",
